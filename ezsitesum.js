@@ -3,6 +3,15 @@ const axios = require("axios");
 const cheerio = require("cheerio");
 const { pipeline } = require("@xenova/transformers");
 
+console.log(" If you want to expand on this, please give me credit. -cooltech334");
+console.log(`                    ____            __   __________ __ __
+  _________  ____  / / /____  _____/ /_ |__  /__  // // /
+ / ___/ __ \\/ __ \\/ / __/ _ \\/ ___/ __ \\ /_ < /_ </ // /_
+/ /__/ /_/ / /_/ / / /_/  __/ /__/ / / /__/ /__/ /__  __/
+/\\___/\\____/\\____/_/\\__/\\___/\\___/_/ /_/____/____/  /_/   
+                                                          `);
+console.log("First load may take a while...");
+
 // Function to scrape the webpage and extract text
 async function scrapeWebsite(url) {
     try {
@@ -12,7 +21,9 @@ async function scrapeWebsite(url) {
             const $ = cheerio.load(response.data);
 
             // Extract the text from <p> tags
-            const paragraphs = $("p").map((i, el) => $(el).text()).get();
+            const paragraphs = $("p")
+                .map((i, el) => $(el).text())
+                .get();
             const text = paragraphs.join(" ");
 
             return text;
@@ -58,7 +69,9 @@ async function main() {
             if (summary) {
                 console.log("\nSummary of the webpage:");
                 console.log(summary);
-                console.log("eztech products are completely free. Please consider supporting by checking out our other products on github: https://github.com/cooltech334")
+                console.log(
+                    "eztech products are completely free. Please consider supporting by checking out our other products on GitHub: https://github.com/cooltech334"
+                );
             } else {
                 console.error("Summarization failed.");
             }
@@ -72,4 +85,3 @@ async function main() {
 
 // Run the script
 main();
-
