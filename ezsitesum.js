@@ -58,6 +58,7 @@ async function main() {
             if (summary) {
                 console.log("\nSummary of the webpage:");
                 console.log(summary);
+                console.log("eztech products are completely free. Please consider supporting by checking out our other products on github: https://github.com/cooltech334")
             } else {
                 console.error("Summarization failed.");
             }
