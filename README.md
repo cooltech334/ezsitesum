@@ -1,3 +1,6 @@
+# IMPORTANT
+ezsitesum is currently under testing for javascript versions and installers. Please currently use the python version.   
+ETA: 12/24/24 1:30 PM.  
 # ezsitesum
 Easy and free CLI-based website summarizer made with python.
 # Prerequisities
